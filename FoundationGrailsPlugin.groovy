@@ -1,4 +1,5 @@
 /*
+ * Copyright 2013 Simon Kenyon.
  * Copyright 2012 Konstantinos Kostarellis.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +16,9 @@
  */
 class FoundationGrailsPlugin {
     // the plugin version
-    def version = "2.1.4.3"
+    def version = "5.0.3"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3 > *"
+    def grailsVersion = "2.3 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
@@ -25,27 +26,33 @@ class FoundationGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
-    def title = "Foundation CSS Framework for Grails"
-    def author = "Konstantinos Kostarellis"
-    def authorEmail = "kosta@shortmail.me"
+    def title = "Foundation 5 CSS Framework for Grails"
+    def author = "Simon Kenyon"
+    def authorEmail = "simon@koala.ie"
     def description = '''\
 Plugin that provides the Foundation CSS framework resources. Foundation is an easy to use, powerful, and flexible framework for building prototypes and production code on any kind of device.
-It integrates nicely with the resources plugin.
+It integrates nicely with the resources plugin. Based on Foundation V2 version by Konstantinos Kostarellis
 '''
 
-    // URL to the plugin's documentation
+    // URL to the plugin's documentation (V2 docs)
     def documentation = "http://grails.org/plugin/foundation"
 
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
     def license = "APACHE"
+	
+	// Details of company behind the plugin (if there is one)
+	def organization = [ name: "The Koala Computer Company Limited", url: "http://koala.ie/" ]
+
+	// Any additional developers beyond the author specified above.
+	def developers = [ [ name: "Simon Kenyon", email: "simon@koala.ie" ]]
 
     // Location of the plugin's issue tracker.
-    def issueManagement = [ system: "GITHUB", url: "https://github.com/delight/grails-foundation/issues" ]
+    def issueManagement = [ system: "GITHUB", url: "https://github.com/simonckenyon/grails-foundation/issues" ]
 
     // Online location of the plugin's browseable source code.
-    def scm = [ url: "https://github.com/delight/grails-foundation" ]
+    def scm = [ url: "https://github.com/simonckenyon/grails-foundation" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before
